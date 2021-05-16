@@ -1,0 +1,52 @@
+{% extends 'drindx.html'%}
+{% block body %}
+<body>
+<form action="/addmovie" method="post">
+  <table width="200" border="0" align="center">
+    <tr>
+      <td>Movie Name </td>
+      <td><label>
+        <input type="text" name="textfield1" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td>Director</td>
+      <td><label>
+        
+        <div align="left">
+            <select name="select">
+              {%  for i in val%}
+              <option value="{{i[1]}}">{{i[2]}}</option>
+              {% endfor %}
+            </select>
+        </div>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Release Date </td>
+      <td><input type="date" name="date" required></td>
+    </tr>
+    <tr>
+      <td>Actors</td>
+      <td><label>
+        <textarea name="textarea1" required></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td><label>
+        <textarea name="textarea2" required></textarea>
+      </label></td>
+    </tr>
+    
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Submit" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'drindx.html'%}
+{% block body %}
+<body>
+<center>
+	<form method="post" action='/success_rate2'>
+<table border=2>
+
+	<tr>
+		<td>Select Movie</td>
+		<td>
+			<select name="movie">
+				<option value="">--Select--</option>
+				{% for i in val %}
+				<option value="{{i[0]}}">{{i[1]}}</option>
+				{% endfor %}
+			</select>
+		</td>
+		<td><input type="submit" name="search" value="Search"></td>
+	</tr>
+<tr>
+<th>Director Name</th>
+<th>Movie</th>
+<th>Rate</th>
+
+</tr>
+{% for i in val2 %}
+
+<tr>
+
+	<td>{{i[1]}} </td>
+	<td>{{i[0]}}</td>
+	<td>{{i[2]}}</td>
+
+
+</tr>
+	{% endfor %}
+</table>
+
+	</form>
+</center>
+</body>
+{% endblock %}

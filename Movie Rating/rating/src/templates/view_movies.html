@@ -1,0 +1,27 @@
+{% extends 'index_ucity.html'%}
+{% block body %}
+<body><center>
+	<form method="post" action='/stfrg'>
+<table border=2>
+<tr>
+<th>Movie Name</th>
+<th>Director</th>
+<th>Release date</th>
+<th>Actors</th>
+</tr>
+{% for i in val %}
+
+<tr>
+
+	<td>{{i[1]}} </td>
+	<td>{{i[6]}}</td>
+	<td>{{i[3]}}</td>
+	<td>{{i[4]}}</td>
+</tr>
+	{% endfor %}
+</table>
+
+	</form>
+</center>
+</body>
+{% endblock %}
