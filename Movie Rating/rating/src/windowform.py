@@ -66,7 +66,7 @@ def check_emotion(filmid):
     # -----------------------------
     # face expression recognizer initialization
     from keras.models import model_from_json
-    model = model_from_json(open("static/model/facial_expression_model_structure.json", "r").read())
+    model = model_from_json(open("C:/Users/Murali/PycharmProjects/movie_flask/data.json", "r").read())
     model.load_weights('static/model/facial_expression_model_weights.h5')  # load weights
 
     # -----------------------------
