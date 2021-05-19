@@ -71,8 +71,7 @@ def check_emotion(filmid):
 
     # -----------------------------
 
-    emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral'
-
+    emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
 
 
 
